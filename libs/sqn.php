@@ -1,5 +1,7 @@
 <?php
-
+if (!isset($core)) {
+    die('.');
+}
 function sqn_validate($string,$key,$id,$off=false){
     $time_zone = @date_default_timezone_get();
     @date_default_timezone_set('Asia/Shanghai');
