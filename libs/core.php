@@ -4,6 +4,7 @@ include 'config.php';
 include 'solvemedia.php';
 include 'sqn.php';
 include 'function.php';
+include 'faucethub.php';
 $ip = get_ip();
 $time = time();
 
