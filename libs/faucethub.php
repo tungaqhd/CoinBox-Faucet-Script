@@ -1,5 +1,7 @@
 <?php
-    
+if (!isset($core)) {
+    die('.');
+}
 $faucethub_lib_version = "v1.0.1";
     
 /* 
