@@ -44,6 +44,9 @@
 /**
  * The solvemedia server URL's
  */
+if (!isset($core)) {
+    die('.');
+}
 define("ADCOPY_API_SERVER",        "http://api.solvemedia.com");
 define("ADCOPY_API_SECURE_SERVER", "https://api-secure.solvemedia.com");
 define("ADCOPY_VERIFY_SERVER",     "verify.solvemedia.com");
