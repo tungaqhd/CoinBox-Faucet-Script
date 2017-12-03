@@ -1,4 +1,8 @@
 <?php
+if (!isset($index_view)) {
+    die('.');
+}
+$core = true;
 session_start();
 include 'config.php';
 include 'solvemedia.php';

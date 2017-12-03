@@ -1,4 +1,5 @@
 <?php 
+$index_view = true;
 include 'libs/core.php'; 
 if (isset($_GET['r']) && !isset($_COOKIE['ref'])) {
     $reff = $mysqli->real_escape_string($_GET['r']);
@@ -109,7 +110,7 @@ if (isset($_POST['address'])) {
                 }
                 fclose($fp);
             }
-            $alert = "<center><img style='max-width: 200px;' src='template/img/trophy.png'><br>{$send['html']}</center>"; 
+            $alert = "<center><img style='max-width: 200px;' src='template/img/trophy.png'><br>{$result['html']}</center>"; 
         }
     }       
 } 
@@ -124,6 +125,7 @@ if (isset($_GET['k'])) {
         if (isset($_COOKIE['ref']) && $address !== $_COOKIE['ref']) {
             $ref = $mysqli->real_escape_string($_COOKIE['ref']);
         } 
+        $api_key = $faucethub_api;
         $faucethub = new FaucetHub($api_key, $currency);
         $rew = $faucet['reward'] + $config_link['reward'];
         $result = $faucethub->send($address, $rew, $ip);
@@ -135,7 +137,7 @@ if (isset($_GET['k'])) {
         if ($result['success'] == true) {
             $send_reward = 1;
         }
-        $alert = "<center><img style='max-width: 200px;' src='template/img/trophy.png'><br>{$send['html']}</center>";
+        $alert = "<center><img style='max-width: 200px;' src='template/img/trophy.png'><br>{$result['html']}</center>";
     } else {
         $alert = "<center><img style='max-width: 200px;' src='template/img/bots.png'><br><div class='alert alert-warning'>Invalid Key !</div></center>";
     }
@@ -144,7 +146,6 @@ $_SESSION['name_tk'] = get_token(70);
 $_SESSION['token'] = get_token(70);
 $_SESSION['add'] = get_token(50);
 
-$his = his();
 if (isset($_COOKIE['balance'])) {
     $balance = $_COOKIE['balance'];
 } else {

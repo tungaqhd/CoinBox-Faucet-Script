@@ -1,4 +1,7 @@
 <?php
+if (!isset($core)) {
+    die('.');
+}
 function get_token($length) {
 	$str = "";
 	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

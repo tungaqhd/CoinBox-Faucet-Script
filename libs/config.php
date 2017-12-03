@@ -1,4 +1,7 @@
 <?php
+if (!isset($core)) {
+    die('.');
+}
 $dbHost = "localhost";
 $dbUser = "username";
 $dbPW = "database pass";
@@ -50,23 +53,11 @@ $config_link['status'] = 'on'; // turn on or off short link bounus
 $config_link['reward'] = 3; // short link bounus amout
      //  start config short link api
 $link[1] = "http://coin.mg/api/?api=acefbf14f0e9b8cee80cd05035facade0530fd1e&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[6] = "http://coin.mg/api/?api=acefbf14f0e9b8cee80cd05035facade0530fd1e&url=http://bitguide.info/link.php?k={key}&format=text";
 
 $link[2] = "http://btc.ms/api/?api=86b6c147ce28028e5c7762afce1656f898279889&url=http://bitguide.info/link.php?k={key}&format=text";
 
-$link[4] = "http://btc.ms/api/?api=86b6c147ce28028e5c7762afce1656f898279889&url=http://bitguide.info/link.php?k={key}&format=text";
+$link[3] = "http://btc.ms/api/?api=86b6c147ce28028e5c7762afce1656f898279889&url=http://bitguide.info/link.php?k={key}&format=text";
 
-$link[3] = "https://madpay.net/api/?api=90720ad27f78aa8777bd69400270f6e7c243b474&url=http://bitguide.info/link.php?k={key}&format=text";
-
-$link[5] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[6] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[7] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[8] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[9] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[10] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[11] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[12] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
-$link[13] = "http://psl.io/api?api=0bd81d31f53b9f943128658b6b6bb7d0b9ef2cd9&url=http://bitguide.info/link.php?k={key}&format=text";
 
 // ad spaces
 $ad['top'] = 'ad top';
