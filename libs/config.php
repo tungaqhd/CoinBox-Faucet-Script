@@ -1,8 +1,8 @@
 <?php
 $dbHost = "localhost";
-$dbUser = "kiemzhrt_teo";
-$dbPW = "tung10C@";
-$dbName = "kiemzhrt_teo";
+$dbUser = "test";
+$dbPW = "test";
+$dbName = "test";
 $mysqli = mysqli_connect($dbHost, $dbUser, $dbPW, $dbName);
 if(mysqli_connect_errno()){
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
