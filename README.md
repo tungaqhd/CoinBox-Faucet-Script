@@ -1,5 +1,6 @@
-# CoinBox Faucet Script
-Free Faucet Script supports short link, multi currency, responsive design,...
+# CoinBox Faucet Script (TOTALLY FREE)
+- Free Faucet Script supports short link, multi currency, responsive design,.../
+- Need helps ? Go to our forum: http://coinbox.club/threads/free-coinbox-faucet-script.5
 
 
 # Mininum Requirements
