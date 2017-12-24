@@ -62,7 +62,6 @@ if (isset($_POST['address']) and isset($_POST['token'])) {
 					if (!isset($goo)) {
 						$mysqli->query("INSERT INTO link (bitcoin_address, sec_key, ip) VALUES ('$address', '$key', '$ip')");
 						log_user($address, $ip);
-						setcookie($i, 'fuck cheater :P', time() + 86400);
 						$url = $link_default;
 						$full_url = str_replace("{key}",$key,$url);
 						$short_link = file_get_contents($full_url);
