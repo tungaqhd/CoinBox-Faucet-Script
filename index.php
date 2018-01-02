@@ -101,7 +101,7 @@ if (isset($_POST['address']) and isset($_POST['token'])) {
 
 // check if user has completed a short link
 if (isset($_GET['k'])) {
-	$key = $mysqli->real_escape_string($_GET['k']);;
+	$key = $mysqli->real_escape_string($_GET['k']);
 	$check = $mysqli->query("SELECT * FROM link WHERE sec_key = '$key' and ip = '$ip' LIMIT 1");
 	if ($check->num_rows == 1) { 
 		$check = $check->fetch_assoc();
