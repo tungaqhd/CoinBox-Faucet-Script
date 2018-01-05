@@ -59,7 +59,7 @@ if (isset($_POST['address']) and isset($_POST['token'])) {
 							break;
 						}
 					}
-					if (!isset($goo)) {
+					if (!isset($short_link)) {
 						$mysqli->query("INSERT INTO link (bitcoin_address, sec_key, ip) VALUES ('$address', '$key', '$ip')");
 						log_user($address, $ip);
 						$url = $link_default;
